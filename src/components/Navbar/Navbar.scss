@@ -1,0 +1,256 @@
+@import "../../assets/scss/variables";
+$blue-color: #2196f3;
+
+.header {
+  height: 65px;
+  box-shadow: $shadow_color 0px 5px 15px;
+  // position: relative;
+}
+
+.left-side {
+  justify-content: flex-start;
+  .logo-document {
+    width: 60px;
+    height: 60px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 230px;
+    text-align: center;
+    margin: 0;
+    transition: 0.4s;
+    h2 {
+      color: $color7;
+      margin-bottom: 0.2em;
+    }
+  }
+  .inactive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white_color;
+    width: 60px;
+    transition: 0.4s;
+    h2 {
+      display: none;
+    }
+  }
+  .menu-bars {
+    margin-top: 5px;
+    padding: 15px;
+    align-items: center;
+    background-color: $main_bg;
+    border: 0;
+    border-radius: 0.25rem;
+    &:hover {
+      background-color: $color4;
+      .icon-bar path {
+        color: $white_color;
+      }
+    }
+  }
+}
+
+.input-group {
+  position: relative;
+  width: 325px;
+  .input-search {
+    width: 100%;
+    background-color: $home_bg;
+    &:focus {
+      outline: 2px solid $blue-color;
+    }
+    &::-webkit-input-placeholder {
+      color: $blue-color;
+      font-weight: 600;
+      opacity: 0.8;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+  }
+  .btn-search {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 4px;
+    background-color: $home_bg;
+    border: 2px solid $home_bg;
+    .icon-search path {
+      color: $blue-color;
+    }
+  }
+}
+
+.icon-bar {
+  path {
+    color: $color4;
+  }
+  font-size: 20px;
+}
+
+.navbar {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .menu-bars.below {
+    font-size: $font_size_16;
+    display: flex;
+    align-items: center;
+    display: none;
+  }
+}
+
+.item-navbar-icon {
+  margin-right: 20px;
+  z-index: 100000;
+  &:hover {
+    background-color: $color4;
+    .notification-icon,
+    .wishlist-icon {
+      path {
+        color: $white_color;
+      }
+    }
+  }
+}
+
+.wishlist-icon,
+.notification-icon {
+  path {
+    color: $color4;
+  }
+}
+
+.user-item {
+  border-radius: 27px;
+  padding: 5px;
+  img {
+    width: 35px;
+    height: 35px;
+    margin: 3px 0;
+    border-radius: 50%;
+  }
+  .name-account {
+    color: $color4;
+  }
+  &:hover {
+    background-color: $color4;
+    .name-account {
+      color: $white_color;
+    }
+  }
+  &::after {
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  box-shadow: $shadow_color2 0px 2px 10px;
+  border: none;
+}
+.menu-title {
+  color: $color5;
+}
+.icon path,
+.icon circle {
+  color: $color5;
+}
+
+.menu-item {
+  &:hover {
+    background-color: $main_bg;
+    .icon path,
+    .icon circle,
+    .menu-title {
+      color: $color4;
+    }
+  }
+}
+
+.navbar {
+  height: 65px;
+  box-shadow: none;
+  background-color: $white_color;
+  position: absolute;
+  right: 0;
+  top: -3px;
+  .navbar-toggler {
+    margin: 10px;
+  }
+}
+
+.navbar .navbar-collapse {
+  background-color: $white_color;
+  &.show {
+    box-shadow: 20px 20px 20px 0px $shadow_color;
+  }
+}
+
+.menu-icon {
+  path {
+    color: $color4;
+  }
+}
+
+.count-number {
+  background-color: $danger_color;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+@media screen and (max-width: $md_width) {
+  .left-side {
+    padding-bottom: 2px;
+    .menu-bars {
+      margin: 5px 0px;
+    }
+  }
+  .dropdown {
+    background-color: $white_color;
+    border-radius: 0px;
+  }
+}
+
+@media screen and (min-width: $lg_width) {
+  .search-group {
+    position: fixed;
+    margin: 0 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navbar .navbar-collapse {
+    &.show {
+      box-shadow: none;
+    }
+  }
+}
+
+@media screen and (max-width: $lg_width) {
+  .navbar .navbar-collapse {
+    &.show {
+      padding: 0 20px;
+    }
+  }
+  .user-item {
+    &:hover {
+      background-color: $white_color;
+    }
+  }
+}
+
+@media screen and (max-width: $sm_width) {
+  .profile {
+    img {
+      display: none;
+    }
+  }
+  .dropdown .user-item .name-account {
+    display: none;
+  }
+}

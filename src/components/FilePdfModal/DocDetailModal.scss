@@ -1,0 +1,27 @@
+@import "../../assets/scss/variables.scss";
+
+.ant-modal {
+  width: 1200px !important;
+  .ant-modal-body {
+    padding: 10px 0;
+  }
+}
+
+.rpv-toolbar__right .rpv-core__display--block-medium:nth-child(3),
+.rpv-core__display--block-medium:nth-child(4),
+.rpv-core__display--block-medium:nth-child(5) {
+  display: none;
+}
+
+.document-title {
+  color: $color7;
+}
+
+@media screen and (max-width: $md_width) {
+  .ant-modal {
+    width: 100% !important;
+    .ant-modal-wrap {
+      padding: 0 -10px;
+    }
+  }
+}

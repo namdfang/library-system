@@ -1,0 +1,53 @@
+@import "../../assets/scss/variables";
+
+body {
+  background-color: $home_bg !important;
+}
+.ant-modal {
+  width: 800px !important;
+}
+.header-content {
+  padding: 10px 20px;
+  margin: 0 30px;
+}
+.modal-header {
+  color: $color4;
+  border-bottom: none;
+}
+.type {
+  margin-bottom: 25px;
+  .type-lable {
+    text-align: right;
+    padding-right: 8px;
+  }
+}
+.btn-form {
+  display: flex;
+  .btn-submit {
+    background-color: $color4;
+    border: none;
+    &:hover {
+      background-color: $color1;
+      color: $color4;
+    }
+  }
+  .btn-cancel {
+    &:hover {
+      color: $danger_color;
+      border-color: $danger_color;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .type {
+    flex-direction: column;
+    .type-lable {
+      text-align: left;
+      padding-bottom: 8px;
+    }
+    span {
+      display: none;
+    }
+  }
+}

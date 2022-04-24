@@ -1,0 +1,25 @@
+@import "../../assets/scss/variables";
+
+.public-layout {
+  background-image: url("../../assets/images/bg_login_register.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.form-public {
+  width: 100vw;
+  max-width: 35rem;
+}
+.form-input {
+  box-shadow: $shadow_color3 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    $shadow_color2 0px -5px 0px inset;
+  padding: 1.5rem 3rem;
+}
+
+@media screen and (max-width: $sm_width) {
+  .form-input {
+    padding: 1.5rem 2rem;
+  }
+}

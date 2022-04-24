@@ -1,0 +1,34 @@
+@import "../../assets/scss/variables";
+
+.wishlist {
+  .document {
+    &:hover {
+      cursor: pointer;
+      background-color: $hover_bg;
+    }
+  }
+  img {
+    width: 40px;
+    height: 55px;
+    object-fit: cover;
+  }
+  .document-title {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: $color7;
+    font-weight: 700;
+    width: 170px;
+  }
+  .btn-delete {
+    path {
+      color: $color1;
+      cursor: pointer;
+    }
+    &:hover path {
+      color: $danger_color;
+    }
+  }
+}

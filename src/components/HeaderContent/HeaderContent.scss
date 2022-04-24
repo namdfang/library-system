@@ -1,0 +1,42 @@
+@import "../../assets/scss/variables";
+
+.content-header {
+  margin: 0 30px;
+  padding: 0 20px;
+  .title-header {
+    font-size: 20px;
+  }
+}
+.breadcrumb {
+  margin-bottom: 0;
+  font-size: 14px;
+  .icon-left {
+    font-size: 18px;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+  .icon-sub-menu {
+    font-size: 18px;
+    margin-right: 3px;
+  }
+  .title-link {
+    cursor: pointer;
+    margin-top: 3px;
+  }
+  .icon-right {
+    margin: 0 10px;
+    color: $content_color;
+  }
+}
+
+@media screen and (max-width: $lg_width) {
+  .content-header {
+    overflow: scroll;
+  }
+  .breadcrumb {
+    .title-menu,
+    .title-sub-menu {
+      display: none;
+    }
+  }
+}

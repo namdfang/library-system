@@ -1,0 +1,28 @@
+@import "../../assets/scss/variables";
+
+.login-container {
+  margin: 8rem 0;
+}
+.label,
+.text-message {
+  font-size: $font-size_14;
+}
+.form-control {
+  background-color: $input_bg_color;
+  border-radius: 0;
+  font-size: $font-size_14;
+}
+.login-error {
+  height: 40px;
+  line-height: 40px;
+  background-color: $error_bg_color;
+  color: $error_color;
+  font-size: $font-size_14;
+}
+
+@media screen and (max-width: $sm_width) {
+  .register {
+    flex-direction: column;
+    text-align: center;
+  }
+}

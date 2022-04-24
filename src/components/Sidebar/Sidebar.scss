@@ -1,0 +1,135 @@
+@import "../../assets/scss/variables";
+
+.side-bar {
+  position: fixed;
+  padding: 15px 0;
+  background-color: $white_color;
+  flex-direction: column;
+  transition: 0.4s;
+  width: 60px;
+  min-height: 100vh;
+  box-shadow: $shadow_color 0px 5px 15px;
+  &.active {
+    width: 230px;
+  }
+}
+
+.side-bar-items {
+  padding-left: 0;
+  .text-link,
+  .title-and-icon {
+    color: $color5;
+  }
+}
+.ant-menu > .ant-menu-item .ant-menu-item-icon {
+  font-size: 25px;
+  margin: 0 7px 0 10px;
+}
+.ant-menu-item .ant-menu-item-icon {
+  font-size: 20px;
+}
+.ant-menu-submenu {
+  .ant-menu {
+    background-color: $white_color;
+  }
+}
+.ant-menu-submenu-arrow {
+  display: none;
+}
+.ant-menu-submenu {
+  margin: 15px 0;
+}
+.ant-menu-submenu {
+  .ant-menu-submenu-title {
+    height: 45px;
+    padding: 0 5px;
+    .ant-menu-item-icon {
+      font-size: 25px;
+    }
+    svg {
+      color: $color5;
+      margin-left: 10px;
+      margin-right: 7px;
+    }
+  }
+}
+.ant-menu-vertical .ant-menu-item {
+  padding: 0 8px;
+}
+.ant-menu-submenu-title {
+  &:hover {
+    .ant-menu-title-content {
+      .title-and-icon,
+      svg {
+        color: $color4;
+      }
+    }
+    .ant-menu-item-icon {
+      g {
+        color: $color4;
+      }
+    }
+    background-color: $main_bg;
+  }
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: $main_bg;
+  svg {
+    path {
+      color: $color4;
+    }
+  }
+  span {
+    color: $color4;
+    .text-link {
+      color: $color4;
+    }
+  }
+}
+
+.ant-menu-submenu-open .ant-menu-submenu-title {
+  svg {
+    path {
+      color: $color4;
+    }
+  }
+  span .title-and-icon {
+    color: $color4;
+  }
+}
+.ant-menu-item {
+  &:hover {
+    background-color: $main_bg;
+    svg path {
+      color: $color4;
+    }
+    span a {
+      color: $color4;
+    }
+  }
+}
+
+.ant-menu-submenu-title {
+  .ant-menu-item-icon {
+    font-size: 25px;
+  }
+  &:hover {
+    svg path {
+      color: $color4;
+    }
+  }
+}
+
+@media screen and (max-width: $xl_width) {
+  .side-bar {
+    position: fixed;
+    top: 65px;
+    width: 0;
+    &.active {
+      width: 230px;
+      z-index: 1000;
+      box-shadow: $shadow_color 5px 10px 8px;
+    }
+  }
+}
